@@ -1,2 +1,2 @@
 # starter-js
- My Rocketseat starter course codes
+ My Rocketseat Starter-Javascript course codes
