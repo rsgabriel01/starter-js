@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>curso Javascript - Execicio 1</title>
+</head>
+<body>
+    <script>
+        function enderecoCompleto(objeto){
+            var endereco = '';
+            var rua = '';
+            var numero = '';
+            var bairro = '';
+            var cidade = '';
+            var uf = '';
+
+            for (propriedade in objeto) {
+                if (propriedade == 'cidade'){
+                    cidade += objeto[propriedade];
+                }else if (propriedade == 'rua'){
+                    rua += objeto[propriedade];
+                }else if (propriedade == 'numero'){
+                    numero += objeto[propriedade];
+                }else if (propriedade == 'bairro'){
+                    bairro += objeto[propriedade];
+                }else if (propriedade == 'uf'){
+                    uf += objeto[propriedade];
+                }
+            } 
+
+            endereco = 'O usuário mora em ' + cidade + ' / ' + uf + ', no bairro ' + bairro + ', na rua "' + rua + '" com nº ' + numero + '.';
+
+            return endereco;
+        };
+        /*
+        function mostrarProps(obj, nomeDoObj) {
+            var resultado = "";
+            for (var i in obj) {
+               // if (obj.hasOwnProperty(i)) {
+                    console.log(i)
+                    resultado += nomeDoObj + "." + i + " = " + obj[i] + "\n";
+               // }
+            }
+            return resultado;
+        }
+        */
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+        /*for (const key in object) {
+            if (object.hasOwnProperty(key)) {
+                const element = object[key];
+                
+            }
+        }*/
+
+        console.log(enderecoCompleto(endereco));
+        
+
+    </script>
+    
+</body>
+</html>

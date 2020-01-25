@@ -1,0 +1,56 @@
+<html>
+    <head>  
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="App">
+            <button id='adicionar' class="botao">Adicionar</button>
+            <button id='remover' class="botao">Remover</button>
+            <br>
+            <br>
+            <div id="squares">
+            </div>
+        </div>
+        <script>
+            function adicionaQuadrado() {
+                var containerElement = document.querySelector('#squares');
+                var boxElement = document.createElement('div');
+                var brElement = document.createElement('br');
+
+                
+                boxElement.setAttribute('class', 'box');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+
+                containerElement.appendChild(boxElement);
+                containerElement.appendChild(brElement);
+            }
+
+            function removeQuadrado() {
+                var containerElement = document.querySelector('#squares');
+                console.log(containerElement);
+                var boxElement = document.querySelectorAll('div[class=box]')[0]
+                var brElement = document.querySelectorAll('br')[2];
+                console.log(boxElement);
+                console.log(brElement);
+                
+                containerElement.removeChild(boxElement);
+                containerElement.removeChild(brElement);
+            }
+
+            var btnAddElement = document.querySelector('#adicionar');
+            var btnRemoveElement = document.querySelector('#remover');
+            
+            btnAddElement.onclick = function(){
+                adicionaQuadrado()
+            }
+
+            btnRemoveElement.onclick = function(){
+                removeQuadrado()
+            }
+        
+        </script>
+    </body>
+</html>

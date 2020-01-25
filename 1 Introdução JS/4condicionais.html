@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Curso JavaScript</title>
+    </head>
+
+    <body>        
+        <script>
+            function retornaSexoIf(sexo){
+                //M = Masculino
+                //F = Feminino
+                
+                if (sexo === 'M' || sexo === 'm'){
+                    return 'Masculino';
+                }else if (sexo === 'F' || sexo === 'f'){
+                    return 'Feminino';
+                }else{
+                    return 'Outro'
+                }
+            }
+
+            function retornaSexoSwitch(sexo){
+                //M = Masculino
+                //F = Feminino
+                switch (sexo){
+                    case 'M':
+                    case 'm':
+                        return 'Masculino';
+                        break;
+                    case 'F':
+                    case 'f':
+                        return 'Feminino';
+                        break;
+                    default: 
+                        return 'Outro';    
+                }
+            }
+
+            function condicionalAnd(sexo, idade){
+                //AND = &&
+                if ((sexo === 'M' || sexo === 'm') && idade === 22){
+                    return 'OK';
+                }else{
+                    return 'NÃO OK';
+                }
+                
+            }
+
+            function condicionalDesigualdade(sexo){
+                
+                if (sexo !== 'M'){
+                    return 'Sexo não é M';
+                }else{
+                    return 'Sexo é M'; 
+                }
+                
+            }
+
+            function condicionalArmazenaVariavel(sexo){
+                //Armazenando condicionalmente valor em outra variavel
+                
+                /*
+                *var masculino;
+                *
+                *if (sexo === 'M'){
+                *    return masculino = true;
+                *}else{
+                *    return masculino = false; 
+                *}
+                *Isso tudo pode ser substituido por isso:
+                */
+                
+                 return masculino = (sexo === 'M');
+
+            }
+
+            var resultadoIf = retornaSexoIf('A');
+            console.log('Resultado IF:', resultadoIf);
+
+            var resultadoSwitch = retornaSexoSwitch('m');
+            console.log('Resultado SWITCH:', resultadoSwitch);
+
+            var resultadoAnd = condicionalAnd('m', 22);
+            console.log('Resultado condicional com AND:', resultadoAnd);
+
+            var resultadoDesigualdade = condicionalDesigualdade('M');
+            console.log('Resultado condicional usando Desigualdade:', resultadoDesigualdade);
+
+            var resultadoVariavel = condicionalArmazenaVariavel('F');
+            console.log('Resultado armazenando condicionalmente valor em outra variavel:', resultadoVariavel);
+            
+        </script>
+    </body>
+</html>

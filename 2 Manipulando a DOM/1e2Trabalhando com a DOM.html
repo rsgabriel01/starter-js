@@ -1,0 +1,35 @@
+<html>
+    <head>  
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="App">
+            <input type="text" name="nome" id="nome"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        <script>
+            var inputElementById = document.getElementById('nome');
+            var inputElementByTag = document.getElementsByTagName('input')[0]; //Sempre retorna um vetor com os resultados, colchetes no final é pra selecionar a posição do elemento no vetor
+            var inputElementByClas = document.getElementsByClassName('nome')[0];  //Sempre retorna um vetor com os resultados, colchetes no final é pra selecionar a posição do elemento no vetor
+            var inputElementByPercorrerDom = document.querySelector('div#app input ');
+            var inputElementByPercorrerDomAttribute  = document.querySelector('input[name=nome]'); //Sempre um resultado
+            var inputElementByPercorrerDomAttribute  = document.querySelectorAll('input[name=nome]'); //Vetor com os resultados
+
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function() {
+                // alert('Botão clicado.');
+                var text = inputElement.value;
+                if (text == '') {
+                    alert('O input está vázio!');
+                } else {
+                    alert(text + '.');
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>

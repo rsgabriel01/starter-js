@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - Exercicio 02</title>
+</head>
+<body>
+    
+    <script>
+        function pares(x, y) {
+            num1 = x;
+            num2 = y;
+            pares = '';
+            if (x <= y) {
+                for (var i = num1; i <= num2; i++) {
+                // console.log(i);
+                    if (i % 2 == 0){
+                        pares += i + ' ';
+                    }
+                }    
+            }else{
+                for (var i = num2; i <= num1; i++) {
+                // console.log(i);
+                    if (i % 2 == 0){
+                        pares += i + ' ';
+                    }
+                } 
+            }
+            
+            
+            return pares;
+
+        }
+        var numInicial = 1;
+        var numFinal = -10
+        console.log('os numero pares entre ' + numInicial + ' e ' + numFinal + ' é: ' + pares(numInicial, numFinal));
+        
+
+    </script>
+</body>
+</html>
